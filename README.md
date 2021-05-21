@@ -1,2 +1,3 @@
-license.txt
 # REPO-A
+
+## Source of Copy
