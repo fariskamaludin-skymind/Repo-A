@@ -19,3 +19,4 @@ jobs:
           dst_repo_name: Repo-B
           src_branch: main
           dst_branch: main
+          clean: true
