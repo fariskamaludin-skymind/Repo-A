@@ -1,5 +1,5 @@
 name: Copy to Repo B job
-on: pull_request
+on: [push, pull_request]
 
 jobs:
   copy:
