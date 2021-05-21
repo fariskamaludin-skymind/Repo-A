@@ -14,10 +14,8 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: /test-folder/.
-          dst_path: /.
+          dst_path: /test-folder/.
           dst_owner: fariskamaludin-skymind
           dst_repo_name: Repo-B
           src_branch: main
           dst_branch: main
-          clean: true
-
