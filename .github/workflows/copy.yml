@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      
+      - name: Run list command  
         run: ls -la
       
      # - name: Copy test folder items into Repo-B
