@@ -3,6 +3,9 @@ on:
   push:
     branches: main
 
+    paths:
+      - 'test-folder/**'
+
 jobs:
   copy:
     name: Copy job
@@ -12,8 +15,8 @@ jobs:
         uses: andstor/copycat-action@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          src_path: /test-folder/.
-          dst_path: /test-folder/.
+          src_path: test-folder/.
+          dst_path: test-folder/.
           dst_owner: fariskamaludin-skymind
           dst_repo_name: Repo-B
           src_branch: main
