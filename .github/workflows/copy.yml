@@ -5,6 +5,7 @@ on:
 
     paths:
       - 'test-folder/**'
+      - '.github/workflows/copy.yml'
 
 jobs:
   copy:
