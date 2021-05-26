@@ -17,7 +17,7 @@ jobs:
         shell: bash
         run: |
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "##[set-output name=sha_short;]$(echo ${GITHUB_SHA} | cut -c1-8)"
+          echo "##[set-output name=sha_short;]$(echo ${GITHUB_SHA} | cut -c1-7)"
 
       - name: Copy test folder items into Repo-B
         uses: andstor/copycat-action@v3
