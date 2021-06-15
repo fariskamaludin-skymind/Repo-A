@@ -27,7 +27,7 @@ jobs:
       - name: Copy test folder items into Repo-B
         uses: andstor/copycat-action@v3
         with:
-          commit_message: ":lipstick: ${{ steps.pr-url.outputs.url }}"
+          commit_message: ":lipstick: Compiled codes from ${{ steps.pr-url.outputs.url }}"
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           src_path: test-folder/.
           dst_path: test-folder/.
