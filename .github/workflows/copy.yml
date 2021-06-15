@@ -24,16 +24,16 @@ jobs:
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "##[set-output name=sha_short;]$(echo ${GITHUB_SHA} | cut -c1-7)"
 
-    #  - name: Copy test folder items into Repo-B
-    #    uses: andstor/copycat-action@v3
-    #    with:
-    #      commit_message: Update file from Repo A branch ${{ steps.vars.outputs.branch }} at commit ${{ steps.vars.outputs.sha_short }}
-    #      personal_token: ${{ secrets.PERSONAL_TOKEN }}
-    #      src_path: test-folder/.
-    #      dst_path: test-folder/.
-    #      dst_owner: fariskamaludin-skymind
-    #      dst_repo_name: Repo-B
-    #      src_branch: main
-    #      dst_branch: test-b
-    #      clean: true
+      - name: Copy test folder items into Repo-B
+        uses: andstor/copycat-action@v3
+        with:
+          commit_message: ":lipstick: ${{ steps.pr-url.outputs.url }}"
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          src_path: test-folder/.
+          dst_path: test-folder/.
+          dst_owner: fariskamaludin-skymind
+          dst_repo_name: Repo-B
+          src_branch: main
+          dst_branch: test-b
+          clean: true
            
